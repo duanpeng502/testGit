@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>kindeditor</title>
+	<script src='./jquery-1.12.4.min.js'></script>
+	<script src='./kindeditor.js'></script>
+	<script src='./html.editor.js'></script>
+	<style>
+		.dp{
+			width: 400px;
+			height: 400px;
+			display: block;
+		}
+	</style>
+
+</head>
+<body>
+	<div>
+		<textarea name="content" id="content-1" cols="30" rows="10" style='with:700px;
+		height:300px;'></textarea>
+	</div>
+		<script>
+			KE.show({
+				id : 'content-1'
+			});
+			htmlEditor('content-1');
+
+	</script>
+</body>
+</html>

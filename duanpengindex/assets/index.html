@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='./jquery-1.12.4.min.js'></script>
+	<script src='./kindeditor.js'></script>
+	<script src='./qti.kindeditor.js'></script>
+	<script src='iscroll.js'></script>
+	<style>
+
+	</style>
+</head>
+<body>
+	<div class='nav'>seajs</div>
+	<div></div>
+	<div class='test'></div>
+	<textarea name="" id="" cols="30" rows="10"></textarea>
+	<select name="" id="" multiple="multiple">
+		<option value ="volvo">Volvo</option>
+		<option value ="saab">Saab</option>
+		<option value="opel">Opel</option>
+		<option value="audi">Audi</option>
+	</select>
+	<label for=""><input type="checkbox">anpple</label>
+	<label for=""><input type="checkbox">pear</label>
+	<marquee behavior="" direction="" scrolldelay='1000' scrollamount='100'></marquee>		
+	<table border='3px' cellpadding='0px'>
+		<tr>
+			<td>111</td>
+		</tr>
+	</table>
+	<p> &lt p &gt...&lt /p &gt</p>
+	<a href="" target='_blank'>11</a>
+	<input type="e-mail">
+	<div class='dp' style=''>fsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddfsdfsdfds</div>
+	<div style='color:red;background:green'>fdff</div>
+	<button id="check">新手报到</button>
+	<a href="">1</a>
+	<a href="">2</a>
+	<a href="">3</a>
+	<a href="">4</a>
+	<ul id="world-list">
+	</ul>
+	<div id="wrapper-list" style='height:100px;width:200px;'>
+		<ul >
+			<li>1</li>
+			<li>1</li>
+			<li>1</li>
+			<li>1</li>
+			<li>1</li>
+			<li>1</li>
+			<li>1</li>
+		</ul>
+	</div>
+
+	<textarea id="editor_id" name="content" style="width:700px;height:300px;">
+	&lt;strong&gt;HTML内容&lt;/strong&gt;
+</textarea>
+</body>
+	<script >
+		var myScroll = new iScroll('wrapper-list',{
+			scrollbars : true,
+			hScroll : true
+		});
+	</script>
+	<script src='./sea.js'></script>
+	<script>
+	$(document).ready(function() {
+		seajs.config({
+			base:"./../",
+			alias : {
+				'jquery' : './jquery-1.12.4.min.js',
+				'css' : './css/seajs.css',
+				'underscore' : './underscore-min.js',
+				'mytpl'		: './newindex.html',
+				'seajs-text' : './seajs-text.js',
+				'backbone'	 : './plugins/backbone-min.js',
+				'kindeditor'  : './qti.kindeditor.js'
+			} 
+		})
+		seajs.use('./init',function(a){
+			console.log(a.name);
+			console.log(a)
+			a.hello();
+			var data = "dpdpp";
+			// seajs.use('./js/main',function(a){
+			// 	console.log(a);
+			// });
+
+		});
+
+
+	});
+
+	// seajs.use('./init.js')
+</script>
+<script>
+var KE = parent.KindEditor;
+</script>
+
+</html>

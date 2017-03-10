@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+.dialog-overlay
+{
+    opacity:0.3;
+    filter:alpha(opacity:30);
+    background:#aaa;
+}
+
+.dialog
+{
+    /*border:5px solid rgba(200,200,200,0.9);*/
+    background:gray;
+	border:1px solid #444;
+    _width:expression('200px'); /* IE6下不指定此值，会一直粘在右侧 */
+}
+
+
+
+.dialog .bar
+{
+    cursor:move;
+    color:#fff;
+    background:#FF6600;
+    padding:6px;
+    min-height:15px; /* 不指定此值，在title和closeText都为空的情况下，可能移动条会消失不见 */
+    _height:expression('20px'); /* ie6下不指定高度，标题栏会变得很小 */
+}
+
+.dialog .bar .title
+{
+    float:left;
+    margin-right:10px;
+}
+
+.dialog .bar .close
+{
+    float:right;
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+.dialog .content
+{
+    background:#fff;
+    padding:10px;
+}
+
+.dialog iframe
+{
+    height:100%;
+    width:100%;
+}
+
+.dialog .toolbar{
+    text-align:center;
+	border-top: 1px solid #CCCCCC;
+    padding: 5px 0;
+}
+
+.dialog .toolbar button{
+    border: 1px solid #b8b8b8;
+    color: #333333;
+	border-radius:2px;
+	cursor:pointer;
+}
+.dialog .toolbar button:hover{border: 1px solid #CCC;background-color:#FFF;}
+
+.dialog iframe{border:0px;}
+
+/* 指定图像最大尺寸，不需要可以删除。 */
+.content img
+{
+    overflow:auto;
+    max-width:700px;
+    max-height:500px;
+    /* IE6版的max-width和max-height，但是也会有点BUG在图片太小时，也会显示最大值，需要同时指定width和height */
+    _width:expression((document.body.clientWidth > 700) ? '700px' : 'auto');
+    _height:expression((document.body.clientHeight > 500) ? '500px' : 'auto');
+}
+
